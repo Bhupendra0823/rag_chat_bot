@@ -151,7 +151,7 @@ import nest_asyncio
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
-nest_asyncio.apply()
+# nest_asyncio.apply()
 
 # ==================== FASTAPI APP INITIALIZATION ====================
 app = FastAPI(title="RAG System API", version="2.0.0")
