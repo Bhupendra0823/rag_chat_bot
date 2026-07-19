@@ -153,6 +153,16 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # nest_asyncio.apply()
 
+
+# ==================== PLAYWRIGHT CONFIG FOR RENDER ====================
+import os
+import sys
+
+# Set Playwright browser path for Render
+if os.environ.get('RENDER', False):
+    os.environ['PLAYWRIGHT_BROWSERS_PATH'] = '/opt/render/.cache/ms-playwright'
+    print(f"✅ Playwright browsers path set to: {os.environ['PLAYWRIGHT_BROWSERS_PATH']}")
+
 # ==================== FASTAPI APP INITIALIZATION ====================
 app = FastAPI(title="RAG System API", version="2.0.0")
 
